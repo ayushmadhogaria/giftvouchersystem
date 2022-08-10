@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?> <!-- XML declaration-->
+<?xml-stylesheet href="catalog_20048840.css" type="text/css"?>  <!-- importing css file to the xml document-->
+<!-- 
+    Name:Ayush Madhogaria
+    London Met ID: 20048840
+    College ID: NP01CP4S210127
+    Date: 05-05-2022
+-->
+<!-- root element versacegiftstore-->
+<versacegiftstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="catalog_20048840.xsd">  <!-- importing the schema file -->
+    <logo/>
+    <store_name> Versace GiftCard Store </store_name>
+    <address> 📍 London, United Kingdom </address>
+    <motto> 
+        " Our Gift Cards and Your Choices. Perfect combination. "
+    </motto>
+    <information_store>
+        We have tied up with 8 global brands. Get discount on purchase with these eight 
+        brands using our different gift cards.
+    </information_store>
+    <promo> Buy the limited Special Edition Gift Card worth $1000 in $800. Hurry up and get it!!</promo>
+    
+    <!-- giftCard element-->
+    <giftcard type="Both" modeofpayment= "Both">
+        <card category="Special"> <!-- Special card both physical and digital payments-->
+            <phcard_general_info><!-- element containing general info about special cards -->
+               <name edition="SpecEd">Versace Special Edition GiftCard</name>
+               <cardphoto name="Special"/>
+               <accepted_location> Accepted on: Multiple platforms of all of our partner stores. </accepted_location> 
+               <valid_area> Locations: In all the physical branches of the four chain stores all over the globe and the e-commerce sites. </valid_area>
+               <benefit>
+                   <![CDATA[ Description:
+                   You will get upto 20% discounts on all the stores and services of 
+                   Dominos, Apple, Adidas, Dunkin, Amazon.com, Alibaba, eBay, Walmart 
+                   depending on total amount. Interesting fact about this card is the 
+                   only card at Versace GiftStore that ensures discount in both physical 
+                   and online stores.]]>
+               </benefit>
+            </phcard_general_info>
+            <sp_card_info>  <!-- element containing info about special cards--><!-- optional data-->
+               <associated_brand> Brands Associated: Dominos, Apple, Adidas, Dunkin,Amazon,Walmart,ebay </associated_brand> <!-- optional data-->
+               <original_price currency="Dollar"> Actual Price: $1000 </original_price>  <!-- optional data-->
+               <offer_price currency="Dollar"> Offer Price: $800 </offer_price>  <!-- optional data-->
+               <availability>Remaining cards: Only 60 Special Edition cards are available with us.</availability><!-- optional data-->
+               <promocode>Promo Code: VerSpEd22 </promocode> <!-- optional data-->
+               <spmessage>This card offers you lifetime membership with us with only $100
+                   as the minimal renewal fees per annum.Using promocode above gives you discount 
+                   on online purchases while this card will give you discount on physical stores.
+               </spmessage> <!-- optional data-->
+            </sp_card_info>
+        </card>
+    </giftcard>
+         
+    <!-- giftcard element -->
+    <giftcard type="Physical" modeofpayment= "Cash" >
+        <card category="Premium"><!-- premium category cards-->
+            <phcard_general_info><!-- element containing general information about Physical cards -->
+               <name edition="PremEd">Premium Edition GiftCard</name>
+               <cardphoto name="Premium"/>
+               <accepted_location> Accepted on: Multiple physical platforms of our food chain, gadgets and apparels stores. </accepted_location>
+               <valid_area>Locations: All the stores of our partners in UK, USA, India, Malaysia, Dubai, HongKong and China. </valid_area>
+               <benefit>
+                    <![CDATA[ Description:
+                    You will get a VIP discount on all the locations of Dominos, 
+                    Dunkin, Adidas and Apple stores.The card will have access in almost 7 different countries.
+                    Special offers will be notified to you sooner or later. Free Card reload on special occassions. ]]>
+                </benefit> 
+            </phcard_general_info>
+            <phadd_card_info><!-- element containing  Additional information of physical cards -->
+               <price currency="Dollar"> Price: $500 </price> <!-- optional data-->
+               <validity format="DD-MM-YYYY"> Valid Till: 06-12-2026 </validity>
+               <number_of_users> Total number of Users: 1253 </number_of_users>              
+               <discount ratio="Percentage"> Estimated Discount: Upto 15% on every purchase depending on total amount </discount>  <!-- Optional DATA-->
+               <type>Card Type: Physical (Only accepted on physical purchases in stores). </type><!-- optional-->
+            </phadd_card_info>
+        </card>
+
+        <card category="Platinum"><!-- platinum category cards-->
+            <phcard_general_info><!-- element containing general information about Physical cards -->
+               <name edition="PlatEd">Platinum Edition GiftCard</name>
+               <cardphoto name="Platinum"/>
+               <accepted_location> Accepted on: Multiple physical platforms of our food chains and apparels stores. </accepted_location>
+               <valid_area>Locations: All the stores of our partners in UK, USA, India, Malaysia and Dubai. </valid_area> <!-- Optional DATA-->
+               <benefit>
+                   <![CDATA[ Description:
+                   You will get a fair discount on all the locations mentioned.
+                   The card will have access in 5 different countries. You will get
+                   discounts on  Dominos, Dunkin and Adidas. 
+                   Special offers will be offered to you on special occassions.]]>
+               </benefit>
+            </phcard_general_info>
+            <phadd_card_info><!-- element containing additional information about Physical cards  -->
+               <price currency="Dollar"> Price: $100 </price>
+               <validity format="DD-MM-YYYY"> Valid Till: 06-12-2024 </validity> <!-- Optional DATA-->
+               <number_of_users> Total number of Users: 7000 </number_of_users>        <!-- Optional DATA-->
+               <discount ratio="Percentage"> Estimated Discount: upto 10% on every purchase depending on total amount</discount>
+               <type>Card Type: Physical (Only accepted on physical purchases in stores). </type><!-- optional-->
+            </phadd_card_info>
+        </card>
+    
+        <card category="Regular"><!-- regular category cards-->
+            <phcard_general_info><!-- element containing general information about Physical card -->
+               <name edition="ReguEd">Regular Edition GiftCard</name>
+               <cardphoto name="Regular"/>
+               <accepted_location> Accepted on: Certain physical platforms of our food chains and clothing stores. </accepted_location>
+               <valid_area>Location: Only in the boundary of the United Kingdom.</valid_area>
+               <benefit>
+                   <![CDATA[ Description:
+                   You will get discount in Adidas, Dominos and Dunkin stores. However,
+                   this card will have access only within the boundary of United Kingdom only.
+                   No special offers will be offered to you except on our birth anniversary.]]>
+               </benefit>
+            </phcard_general_info>
+           <phadd_card_info><!-- element containing additional information about Physical card -->
+               <price currency="Dollar"> Price: $50 </price>
+               <validity format="DD-MM-YYYY"> Valid Till: 06-12-2022 </validity>
+               <number_of_users> Total Number of Users: 5000 </number_of_users>
+               <discount ratio="Percentage">5% Discount are available only in weekends on purchases. </discount>
+               <type>Card Type: Physical (Only accepted on physical purchases in stores). </type>    <!-- optional-->
+           </phadd_card_info>
+        </card>
+    </giftcard>
+    
+    <!-- giftcard element-->
+    <giftcard type= "Digital" modeofpayment= "E-wallet" >
+        <card category="VIP">  <!-- VIP digital card -->
+            <dgcard_info><!-- element containing all the information about Digital cards -->
+               <name voucherType="VIPDg">VIP Digital Voucher</name>
+               <cardphoto name="VIP"/>
+               <inform>Point on blurred text for coupon code. </inform>
+               <code> VerVIP22092 </code>
+               <validity format="DD-MM-YYYY"> Valid Till: 09-12-2030 </validity> <!-- optional data -->
+               <accepted_location> Accepted on: Global e-commerce platforms which includes Amazon, Walmart and eBay. </accepted_location>
+               <price currency="Dollar"> Price: $500 </price>
+               <number_of_users> Number of Users till date: 567 </number_of_users>
+               <discount ratio="Percentage"> Estimated discount: upto 20% discount in e-store depending on total amount </discount>
+               <benefit>
+                   Use gift card coupon code and get heavy discounts. Save more with our vouchers and cards. 
+                   Amazon, eBay and Walmart awaits to offer you discounts. 
+               </benefit>
+            </dgcard_info>
+        </card>
+
+        <card category="SpecialDigital"> <!-- Special Digital Card-->
+            <dgcard_info><!-- element containing all the information about Digital cards -->
+               <name voucherType="SpecDg">Special Digital Voucher</name>
+               <cardphoto name="SpecialDg"/>
+               <inform>Point on blurred text for coupon code. </inform>
+               <code> VerSpe22076 </code>
+               <validity format="DD-MM-YYYY"> Valid Till: 09-12-2024 </validity> <!-- optional data -->
+               <accepted_location> Accepted on: Global e-commerce platforms which includes Amazon, Walmart and eBay. </accepted_location>
+               <price currency="Dollar"> Price: $200 </price>
+               <number_of_users> Number of users till date: 1300 </number_of_users>
+               <discount ratio="Percentage">Estimated discount: upto 15% discount on orders depending on total amount </discount>
+               <benefit>
+                   Use coupon codes and get heavy discounts. Save more with our vouchers and cards. Amazon,
+                   eBay and Walmart offers discounts on every purchase until the date of expiry. 
+               </benefit>
+            </dgcard_info>
+        </card>
+
+        <card category="RegularDigital"> <!-- Regular Digital Card-->
+            <dgcard_info> <!-- element containing all the information about Digital cards -->
+               <name voucherType="ReguDg">Regular Digital Voucher</name>
+               <cardphoto name="RegularDg"/>
+               <inform>Point on blurred text for coupon code. </inform>
+               <code> VerReg22098 </code>
+               <validity format="DD-MM-YYYY">Valid Till: 09-12-2022 </validity>
+               <accepted_location> Accepted on: Global e-commerce platforms which includes Amazon, Walmart and eBay. </accepted_location>
+               <price currency="Dollar"> Price: $100 </price>
+               <number_of_users> Number of users till date: 2000 </number_of_users>
+               <discount ratio="Percentage">Estimated discount: upto 5% discount on orders depending on total amount</discount>
+               <benefit>
+                   Use coupon codes and get heavy discounts. Save more with our vouchers and cards. Get
+                   fair discounts on purchases on Amazon, eBay and Walmart. Highly recommendable for
+                   students.
+               </benefit>
+            </dgcard_info>
+        </card>
+    </giftcard>
+    <brand>  <!-- brands assocaiated to the store -->
+        <partner> Our Proud Partners </partner>
+        <dominos/>
+        <apple/>
+        <adidas/>
+        <dunkin/>
+        <amazon/>
+        <alibaba/>
+        <ebay/>
+        <walmart/>
+    </brand>
+    <footer> <!-- footer elements in the XML data -->
+        <reachout_message>Want gift card? Connect with us.</reachout_message>
+        <contact_details>
+            <telephone_number> TELEPHONE: +988-73492924 </telephone_number>
+            <mobile_number> MOBILE: 413218694 </mobile_number>
+            <fax> FAX: 81832847 </fax>
+        </contact_details>
+        <socialmedia>
+            <email> versacegiftstore2022@gmail.com</email>
+            <website_url> Website: https://www.giftstorelondonuk.com/versacegiftstore </website_url>
+            <facebook> Facebook: https://www.facebook.com/versacegiftstore </facebook>
+            <instagram> Instagram: https://www.instagram.com/versacegiftstore </instagram>
+            <youtube> Youtube: https://www.youtube.com/versacegiftstore </youtube>
+        </socialmedia>
+        <copyright> &#169; Versace GiftCard Store 2022 | All Rights Reserved </copyright>
+    </footer>
+</versacegiftstore> <!-- ending of root element -->

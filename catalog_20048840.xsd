@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- xml type declararion-->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- defining namespace xs:-->
+<xs:element name="versacegiftstore" type="versacegiftstoreType"/> <!-- root element -->
+<!-- use of Valetian Blind schema model-->
+<!-- optional data are those having minOccurs=0 maxOccurs=1 -->
+<!-- simple type= elements just having texts-->
+<!-- complex type= elements having elements, string or attributes -->
+<xs:complexType name="versacegiftstoreType">
+    <xs:sequence>
+        <xs:element name="logo"/>
+        <xs:element name="store_name" type="xs:string"/>
+        <xs:element name="address" type="xs:string"/>
+        <xs:element name="motto" type="xs:string"/>
+        <xs:element name="information_store" type="xs:string"/>
+        <xs:element name="promo" type="xs:string"/>
+        <xs:element name="giftcard" type="giftcardType" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element name="brand" type="brandType"/>
+        <xs:element name="footer" type="footerType"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="giftcardType">
+    <xs:sequence>
+        <xs:element name="card" type="cardType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="typeType" use="required"/>
+    <xs:attribute name="modeofpayment" type="modeofpaymentType" use="required"/>
+</xs:complexType> 
+
+<xs:simpleType name="typeType">  <!-- restriction for type attribute of giftcard-->
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Both"/>
+        <xs:enumeration value="Physical"/>
+        <xs:enumeration value="Digital"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="modeofpaymentType"> <!-- restriction for modeofpayment attribute of giftcard-->
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Cash"/>
+        <xs:enumeration value="E-wallet"/>
+        <xs:enumeration value="Both"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="cardType">
+    <xs:sequence>
+        <xs:element  name="phcard_general_info" type="phcard_general_infoType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="sp_card_info"  type="sp_card_infoType" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="phadd_card_info" type="phadd_card_infoType"  minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="dgcard_info" type="dgcard_infoType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    <xs:attribute name="category" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="phcard_general_infoType">  <!-- genral information about physical card-->
+    <xs:sequence>
+       <xs:element name="name" type="nameType" minOccurs="0" maxOccurs="unbounded"/>        
+       <xs:element name="cardphoto" type="cardphotoType" minOccurs="0" maxOccurs="unbounded"/>
+       <xs:element name="accepted_location" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xs:element name="valid_area" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+       <xs:element name="benefit" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sp_card_infoType">  <!-- information about special card--> <!-- optional data -->
+    <xs:sequence>
+        <xs:element name="associated_brand" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="original_price" type="original_priceType" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="offer_price" type="offer_priceType" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="availability" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="promocode" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="spmessage" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="phadd_card_infoType"> <!-- additional information about physical card-->
+    <xs:sequence>
+        <xs:element name="price" type="priceType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="validity" type="validityType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="number_of_users" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="discount" type="discountType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="type" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dgcard_infoType">   <!-- information about digital card -->
+    <xs:sequence>
+        <xs:element name="name" type="nameType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="cardphoto" type="cardphotoType" minOccurs="0" maxOccurs="unbounded"/>                          
+        <xs:element name="inform" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="code" type="codeType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="validity" type="validityType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="accepted_location" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="price" type="priceType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="number_of_users" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="discount" type="discountType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="benefit" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:attributeGroup name="nameGroup">  <!-- attributeGroup for differnt attribute of name -->
+    <xs:attribute name="edition" type="xs:string" use="optional"/>
+    <xs:attribute name="voucherType" type="xs:string" use="optional"/>
+</xs:attributeGroup>
+
+<xs:complexType name="nameType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attributeGroup ref="nameGroup"></xs:attributeGroup>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="cardphotoType">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="original_priceType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="currency" type="currencyType" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="offer_priceType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="currency" type="currencyType" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="priceType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="currency" type="currencyType" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="currencyType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Dollar"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="validityType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="format" type="formatType" use="required"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:simpleType name="formatType">  <!-- restriction for format attrubute values-->
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="DD-MM-YYYY"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="codeType">   <!-- restriction for codes of digital codes in regex pattern-->
+    <xs:restriction base="xs:token">
+        <xs:pattern value="[Ver]{3}[A-Za-z]{3}[0-9]{5}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:complexType name="discountType">
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute name="ratio" type="xs:string" use="optional"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="brandType">
+    <xs:sequence>
+      <xs:element name="partner" type="xs:string" />  
+      <xs:element name="dominos" />
+      <xs:element name="apple" />
+      <xs:element name="adidas" />
+      <xs:element name="dunkin" />
+      <xs:element name="amazon" />
+      <xs:element name="alibaba" />
+      <xs:element name="ebay" />
+      <xs:element name="walmart" />
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="footerType">
+    <xs:sequence>
+        <xs:element name="reachout_message" type="xs:string"/>
+        <xs:element name="contact_details" type="contact_detailsType"/>
+        <xs:element name="socialmedia" type="socialmediaType"/>
+        <xs:element name="copyright" type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="contact_detailsType">
+    <xs:sequence>
+        <xs:element name="telephone_number" type="xs:string"/>
+        <xs:element name="mobile_number" type="xs:string"/>
+        <xs:element name="fax" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="socialmediaType">
+    <xs:sequence>
+        <xs:element name="email" type="emailType" />
+        <xs:element name="website_url" type="xs:string" />
+        <xs:element name="facebook" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- optional data -->
+        <xs:element name="instagram" type="xs:string" minOccurs="0" maxOccurs="1"/><!-- optional data -->
+        <xs:element name="youtube" type="xs:string" minOccurs="0" maxOccurs="1"/><!-- optional data -->
+    </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="emailType">  <!-- restriction for email using the regex pattern-->
+    <xs:restriction base="xs:anyURI">
+        <xs:maxLength value="250"/>
+        <xs:pattern value="[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

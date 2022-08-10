@@ -1,0 +1,811 @@
+/* importing Poppins font family  */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/* main background of the xml page for gift store  */
+versacegiftstore{
+    background-color: rgb(253, 255, 253);
+}
+/* css for the logo of the XML document */
+logo{
+    float: left;
+    background-image: url("logo.png");
+    background-position: center;
+    background-size: 240px;
+    width: 240px;
+    height: 140px; 
+    margin-left: 60px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+/* hover effect of the logo */
+logo:hover{  
+    transform: scale(1.1);
+}
+/* css for the store name  */
+store_name{
+    display: block;
+    color: rgb(151, 89, 89);
+    font-family: poppins;
+    font-size: 40px;   
+    padding-top: 10px;
+    padding-left: 580px;
+}
+/* css for the address */
+address{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 650px;
+    font-size: 25px;
+    color:rgb(129, 39, 59);
+}
+/* css for the motto */
+motto{
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 50px;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:red;
+    -webkit-text-stroke: 1.5px black;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 7px solid rgb(155, 155, 144);
+    animation:
+    animate 3.5s linear infinite;
+}
+/* animated effect css for linear moving text */
+@keyframes animate  {
+    from { width: 0 }
+    to { width: 40%;}
+}
+/* css for the store information */
+information_store{
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px 0 rgb(71, 11, 11);
+    font-style: italic;
+    float: left;
+    background-color: rgb(195, 207, 186);
+
+}
+information_store:hover{
+    box-shadow: 0 2px 10px 0 black;
+}
+
+/* physical card css */
+/* css for Premium category cards (start) */
+card[category="Premium"]
+{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 13px;
+    color: rgb(37, 22, 2);
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    width: 380px;
+    background-color:silver;
+    border: solid 2px rgb(71, 69, 69); 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+
+}
+card[category="Premium"]:hover{
+    border: dashed 2px rgb(65, 25, 25);
+    transform: scale(1.05);
+}
+name[edition="PremEd"]
+    {
+    display: flex;
+    border: 2px solid rgb(37, 22, 2); 
+    padding-left: 18%; 
+    text-align: center;
+    font-family: Arial, Helvertica, Sans-serif; 
+    font-size: 14pt; 
+    color: rgb(48, 47, 47);
+    font-weight: bold; 
+}
+cardphoto[name="Premium"]{
+    display: block;
+    background-image: url("premium.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 90px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="Premium"]:hover{
+    transform: scale(1.2);
+}
+/* css for premium category card (ends) */
+
+/* css for platinum category cards(start) */
+card[category="Platinum"]
+{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    color: rgb(41, 37, 22);
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    width: 380px;
+    background-color:rgb(151, 168, 224);
+    border: solid 2px rgb(71, 69, 69); 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+
+}
+card[category="Platinum"]:hover{
+    border: dashed 2px white;
+    transform: scale(1.05);
+}
+name[edition="PlatEd"]
+    {display: flex;
+    border: 2px solid rgb(7, 42, 82); 
+    padding-left: 18%;
+    font-family: Arial, Helvertica, Sans-serif; 
+    font-size: 14pt; 
+    color: rgb(7, 42, 82);
+    font-weight: bold; 
+}
+cardphoto[name="Platinum"]{
+    display: block;
+    background-image: url("platinum.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 100px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="Platinum"]:hover{
+    transform: scale(1.2);
+}
+/* css for platinum card (ends) */
+
+/* css for regular card (start) */
+card[category="Regular"]
+{
+    flex: auto;
+    font-size: 13px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    width: 380px;
+    background-color:rgb(207, 76, 76);
+    color: rgb(16, 5, 17);
+    border: solid 2px black; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+
+}
+card[category="Regular"]:hover{
+    border: dashed 2px rgb(78, 54, 3);
+    transform: scale(1.05);
+}
+name[edition="ReguEd"]
+    {
+    display: flex;
+    border: 2px solid rgb(16, 5, 17); 
+    padding-left: 18%; 
+    text-align: center;
+    font-family: Arial, Helvertica, Sans-serif; 
+    font-size: 14pt; 
+    color: rgb(26, 43, 35);
+    font-weight: bold; 
+}
+cardphoto[name="Regular"]{
+    display: block;
+    background-image: url("regular.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 100px; 
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="Regular"]:hover{
+    transform: scale(1.2);
+}
+/* css for regular card (ends) */
+
+/* css for special promo announcement of the store */
+promo{
+    display: block;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 8px 0 rgb(100, 70, 68);
+    font-style: italic;
+    float: right;
+    background-color: rgb(212, 216, 209);
+}
+promo:hover{
+    box-shadow: 0 2px 10px 0 rgb(110, 9, 9);
+}
+
+/* css for the special category card (start) */
+card[category="Special"]
+{   display: block;
+    text-align: justify;
+    font-size: 12.7px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+    width: 530px;
+    color: rgb(66, 48, 25);
+    background-color:rgb(230, 192, 97);
+    border: solid 2px black; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+    
+}
+card[category="Special"]:hover{
+    border: dashed 2px rgb(126, 124, 124);
+    transform: scale(1.05);
+}
+
+name[edition="SpecEd"]
+    {display: flex;
+    border: 2px solid rgb(61, 44, 11); 
+    padding-left: 21%; 
+    text-align: center;
+    font-family: Arial, Helvertica, Sans-serif; 
+    font-size: 14pt; 
+    color:rgb(61, 44, 11);
+    font-weight: bold; 
+}
+cardphoto[name="Special"]{
+    display: block;
+    background-image: url("special.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 90px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="Special"]:hover{
+    transform: scale(1.2);
+}
+/* css for the special category card(ends) */
+
+/* css for making lists to differnt elements (start) */
+accepted_location{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+associated_brand{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+valid_area{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+offer_price{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+original_price{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+availability{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+promocode{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+info{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+spmessage{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+benefit{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+type{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+price{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+validity{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+number_of_users{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+discount{
+    display: list-item; 
+    list-style-type: disc;
+    margin-top: 5px; 
+}
+
+original_price{
+    text-decoration: line-through 1.8px;
+}
+/* css for making list to elements (ends) */
+inform{
+    font-size: 14px;
+    color: rgb(51, 28, 41);
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* digital cards css */
+/* css for VIP cards Digital(start) */
+card[category="VIP"]
+{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 280px;
+    float: left;
+    color: rgb(7, 31, 27);
+    background-color:rgb(150, 238, 78);
+    border: dashed 2px black; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+
+card[category="VIP"]:hover{
+    border: dotted 2px rgb(0, 0, 0);
+    transform: scale(1.05);
+    
+}
+cardphoto[name="VIP"]{
+    display: block;
+    background-image: url("VIP.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 100px; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="VIP"]:hover{
+    transform: scale(1.2);
+}
+
+/* css for the codes for digital cards  */
+code{
+    border: black 2px solid;
+    width: 200px;
+    text-align: center;
+    margin-left: 90px;
+    font-weight: bold;
+    filter:blur(2px);
+    color: rgb(14, 13, 13);
+    font-size: 13px;
+}
+code:hover{
+    filter: none;
+}
+name[voucherType="VIPDg"]{
+    display: flex;
+    border: 2px solid rgb(3, 27, 13); 
+    padding-left: 18%;  
+    text-align: center;
+    font-family: Arial, Helvetica, Sans-serif; 
+    font-size: 14pt; 
+    color:rgb(3, 27, 13);
+    font-weight: bold; 
+}
+/* css for VIP card Digital (ends) */
+
+/* css for VIP card Digital (start) */
+card[category="SpecialDigital"]{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 280px;
+    float: left;
+    background-color:rgb(220, 250, 85);
+    border: dashed 2px black; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+
+card[category="SpecialDigital"]:hover{
+    border: dotted 2px rgb(94, 36, 36);
+    transform: scale(1.05);
+    
+}
+cardphoto[name="SpecialDg"]{
+    display: block;
+    background-image: url("specialdg.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 110px; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="SpecialDg"]:hover{
+    transform: scale(1.1);
+}
+name[voucherType="SpecDg"]{
+    display: flex;
+    border: 2px solid rgb(56, 71, 151); 
+    padding-left: 18%; 
+    text-align: center;
+    font-family: Arial, Helvetica, Sans-serif; 
+    font-size: 14pt; 
+    color:rgb(56, 71, 151);
+    font-weight: bold; 
+}
+/* css for Special card Digital (ends) */
+
+/* css for Regular card Digital (start) */
+card[category="RegularDigital"]{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 280px;
+    float: left;
+    background-color:rgb(78, 138, 155);
+    border: dashed 2px black; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    padding: 20px;
+    height: 400px;
+    margin-left: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+
+card[category="RegularDigital"]:hover{
+    border: dotted 2px rgb(99, 38, 38);
+    transform: scale(1.05);
+}
+
+cardphoto[name="RegularDg"]{
+    display: block;
+    background-image: url("regulardgvoucher.PNG");
+    background-position: bottom;
+    background-size: 240px;
+    width: 240px;
+    height: 95px; 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+cardphoto[name="RegularDg"]:hover{
+    transform: scale(1.1);
+}
+name[voucherType="ReguDg"]{
+    display: flex;
+    border: 2px solid rgb(21, 23, 36); 
+    padding-left: 15%;
+    text-align: center;
+    font-family: Arial, Helvetica, Sans-serif; 
+    font-size: 14pt; 
+    color:rgb(21, 23, 36);
+    font-weight: bold; 
+}
+/* css for Regular card Digital (ends) */
+
+/* css for brands promotion (start) */
+partner{
+    display: block;
+    text-align: center;
+    font-size: 37px;
+    font-family: poppins;
+    color: rgb(blue, white,green);
+    margin-bottom: 25px;
+}
+dominos{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 100px;
+    height: 125px; 
+    margin-left: 40px;
+    display: block;
+    background-image: url("dominos.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+dominos:hover{
+    transform: scale(1.2);
+}
+
+apple{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 150px;
+    height: 125px; 
+    margin-left: 10px;
+    background-image: url("apple.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+apple:hover{
+    transform: scale(1.2);
+}
+adidas{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 180px;
+    height: 120px; 
+    margin-left: 10px;
+    display: block;
+    background-image: url("adidas.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+adidas:hover{
+    transform: scale(1.13);
+}
+dunkin{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 200px;
+    height: 121px; 
+    margin-left: 10px;
+    display: block;
+    background-image: url("dunkin.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+dunkin:hover{
+    transform: scale(1.07);
+}
+amazon{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 200px;
+    height: 85px; 
+    margin-left: 10px;
+    display: block;
+    background-image: url("amazon.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+amazon:hover{
+    transform: scale(1.06);
+}
+alibaba{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 200px;
+    height: 150px; 
+    margin-left: 10px;
+    display: block;
+    background-image: url("ali.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+alibaba:hover{
+    transform: scale(1.2);
+}
+ebay{
+    float: left;
+    background-size: 150px;
+    background-position: bottom;
+    width: 150px;
+    height: 70px; 
+    margin-left: 10px;
+    background-image: url("ebay.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+ebay:hover{
+    transform: scale(1.2);
+}
+walmart{
+    float: left;
+    background-size: 200px;
+    background-position: bottom;
+    width: 200px;
+    height: 170px; 
+    margin-left: 5px;
+    background-image: url("walmart.png");
+    cursor: pointer;
+    transition: 0.5s all ease-in-out
+}
+walmart:hover{
+    transform: scale(1.08);
+}
+/* css for brand promotion(ends) */
+
+/* css for footer(start)*/
+footer {
+    position: absolute;
+    top: 1400px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    text-align: center;
+    height: 3em;
+    left: 0;
+    font-size: 14px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+reachout_message{
+    font-size: 20px;
+    display: block;
+    font-family: poppins;
+    color: rosybrown;
+  
+}
+
+contact_details{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    background-color: tomato;
+    
+}
+telephone_number{
+    margin-right: 25px;
+}
+mobile_number{
+    margin-right: 25px;
+}
+fax{
+   margin-right: 25px;
+}
+
+socialmedia{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+email{
+    display: block;
+    cursor: pointer;
+}
+email:hover{
+    font-weight: bold;
+}
+website_url{
+    display: block;
+    cursor: pointer;
+}
+website_url:hover{
+    color: rgb(23, 46, 90);
+    font-weight: bold;
+}
+facebook{
+    display: block;
+    cursor: pointer;
+}
+facebook:hover{
+    color: blue;
+    font-weight: bold;
+}
+instagram{
+    display: block;
+    cursor: pointer;
+}
+instagram:hover{
+    color:purple;
+    font-weight: bold;
+}
+youtube{
+    display: block;
+    cursor: pointer;
+}
+youtube:hover{
+    color: red;
+    font-weight: bold;
+}
+copyright{
+    margin-top: 6px;
+    display: block;
+    background-color: teal;
+    color: whitesmoke;
+    font-size: 15px;
+} 
+/* css for footer (ends) */
+
+
+
+
+
+
+
+
